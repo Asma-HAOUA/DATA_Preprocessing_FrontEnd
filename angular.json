@@ -23,7 +23,12 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/styles.scss"],
+                        "styles": [
+                          "src/styles.scss",
+                          "./node_modules/primeicons/primeicons.css",
+                          "./node_modules/primeng/resources/themes/lara-light-indigo/theme.css",
+                          "./node_modules/primeng/resources/primeng.min.css"
+                        ],
                         "scripts": [],
                         "vendorChunk": true,
                         "extractLicenses": false,

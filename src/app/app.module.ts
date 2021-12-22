@@ -31,6 +31,9 @@ import { NettoyerDatasetComponent } from './pages/nettoyer-dataset/nettoyer-data
 import { SupprimerNullesComponent } from './pages/nettoyer-dataset/supprimer-nulles/supprimer-nulles.component';
 import { SupprimerDoublesComponent } from './pages/nettoyer-dataset/supprimer-doubles/supprimer-doubles.component';
 import { SupprimerInfiniesComponent } from './pages/nettoyer-dataset/supprimer-infinies/supprimer-infinies.component';
+import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+import {BadgeModule} from 'primeng/badge';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -65,6 +68,9 @@ registerLocaleData(localeEn, 'en-EN');
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
+        TableModule,
+        BadgeModule,
+        ButtonModule,
         ToastrModule.forRoot({
             timeOut: 3000,
             positionClass: 'toast-bottom-right',
