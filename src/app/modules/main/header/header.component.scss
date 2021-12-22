@@ -1,0 +1,24 @@
+.navbar{
+    background-color:#67595E;
+}
+
+
+.fa-bars {
+    cursor: pointer;
+}
+
+.nav-item {
+    .nav-link {
+        cursor: pointer;
+        color:#EED6D3;
+        padding-right: 40px;
+        font-size: 15;
+        font-weight: 50;
+        font: 1em serif;
+    }
+    .nav-link:hover {
+        color: #A49393;
+    }
+    
+}
+

@@ -1,0 +1,28 @@
+:host {
+    display: block;
+}
+
+.titleStyle{
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    font-style: oblique;
+}
+
+.titleStyle:hover {
+    position: relative;
+    text-shadow: 2px 2px 2px #F79489;
+}
+
+.info{
+    .styleUser{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .styleUser:hover{
+        text-shadow: 2px 2px 2px #F79489;
+    }
+}
