@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.importerDiv{
+    display: flex;
+    width: 100%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+
+.importerDiv div{
+    display: block;
+}
+#inputUpload{
+    display: none;
+    
+}
+
+
+
+.LablUpload{
+    color:black;
+    width: 250px;
+    height: 60px;
+    background-color:#f5af09;
+    border-radius: 30px;
+    font-size:17px;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    display: flex;
+}
+
+.LablUpload i{
+    font-size: 20px;
+}
+
+#upload{
+    display: none;
+
+    color:black;
+    width: 250px;
+    height: 60px;
+    background-color:#f5af09;
+    border-radius: 30px;
+    position: absolute;
+    margin: auto;
+    font-size:17px;
+    font-weight: bold;
+    justify-content: center;
+    align-items:center;
+    border: none;
+    //display: block;
+}
+
+#upload i{
+    font-size: 20px;
+}
