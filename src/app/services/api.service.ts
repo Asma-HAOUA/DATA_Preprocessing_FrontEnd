@@ -12,11 +12,15 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
+
+  //###################### Upload api ###############################
   // communicate with upload API (POST) return 10 rows of dataset
   public uploadDataset(files):Observable<any>{
     return this.http.post(`${this.apiServerUrl}/upload`,files);
   }
 
+
+  //###################### Null values api #################################
   // communicate with null values API (GET) return all rows with null values
   public nullValues() : Observable<any>{
     return this.http.get<any>(`${this.apiServerUrl}/null_values`);
@@ -26,4 +30,14 @@ export class ApiService {
   public deleteNullRows():Observable<any>{
     return this.http.delete(`${this.apiServerUrl}/delete_null`);
   }
+
+
+  //########################## Dashboard api ################################
+  // count different class rows
+  public countClass():Observable<any>{
+    return this.http.get(`${this.apiServerUrl}/count_class`);
+  }
+
+
+
 }
