@@ -27,7 +27,6 @@ export class ApiService {
     return this.http.delete(`${this.apiServerUrl}/delete_null`);
   }
 
-<<<<<<< HEAD
   //communicate api, willreturn all rows which have infinit values
   public getInfinitRows():Observable<any>{
     return this.http.get<any>(`${this.apiServerUrl}/infinit_values`);
@@ -37,7 +36,6 @@ export class ApiService {
   public deletetRows_InfinitValues():Observable<any>{
     return this.http.delete(`${this.apiServerUrl}/delete_infinit`);
   }
-=======
   // communicate with duplicate values API (GET) return all rows duplicated
   public duplValues() : Observable<any>{
     return this.http.get<any>(`${this.apiServerUrl}/duplicate_values`);
@@ -48,5 +46,4 @@ export class ApiService {
     return this.http.delete(`${this.apiServerUrl}/delete_duplicate`);
   }
 
->>>>>>> 16b5c105d0290044ed0118fd18b19bfd85ee250c
 }
