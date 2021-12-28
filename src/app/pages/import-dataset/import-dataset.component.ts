@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-import-dataset',
@@ -13,7 +14,7 @@ export class ImportDatasetComponent implements OnInit {
   fileList : any = null ;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +44,7 @@ export class ImportDatasetComponent implements OnInit {
     .subscribe(res=>{
       console.log(res );
     })
+    this.toastr.success('fichiers importés avec succès ');
 
   
   }

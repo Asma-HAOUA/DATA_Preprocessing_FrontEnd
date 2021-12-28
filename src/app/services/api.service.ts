@@ -26,4 +26,15 @@ export class ApiService {
   public deleteNullRows():Observable<any>{
     return this.http.delete(`${this.apiServerUrl}/delete_null`);
   }
+
+  // communicate with duplicate values API (GET) return all rows duplicated
+  public duplValues() : Observable<any>{
+    return this.http.get<any>(`${this.apiServerUrl}/duplicate_values`);
+  }
+
+  // communicate with delete null values API (DELETE) return number of all null values deleted
+  public deleteduplRows():Observable<any>{
+    return this.http.delete(`${this.apiServerUrl}/delete_duplicate`);
+  }
+
 }

@@ -16,43 +16,28 @@
     <!-- /.container-fluid -->
 </section>
 
-<!-- Main content -->
-<section class="content">
-    <!-- Default box -->
-    <div class="container-fluid">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Title</h3>
-
-                <div class="card-tools">
-                    <button
-                        type="button"
-                        class="btn btn-tool"
-                        data-widget="collapse"
-                        data-toggle="tooltip"
-                        title="Collapse"
-                    >
-                        <i class="fa fa-minus"></i>
-                    </button>
-                    <button
-                        type="button"
-                        class="btn btn-tool"
-                        data-widget="remove"
-                        data-toggle="tooltip"
-                        title="Remove"
-                    >
-                        <i class="fa fa-times"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="card-body">
-                Start creating your amazing application!
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer">Footer</div>
-            <!-- /.card-footer-->
-        </div>
-    </div>
-    <!-- /.card -->
-</section>
-<!-- /.content -->
+<div style="display: flex;">
+    <button pButton (click)="deleteNullValues()" type="button" icon="pi pi-trash" label="Delete All" class="ml-3 p-button-danger p-button-raised p-button-rounded" style="float: right;"></button>
+  </div>
+  <br>
+  <br>
+  
+  <div class="card" style="margin-left: 20px; margin-right: 20px;">
+    <p-table [columns]="columns" [value]="nullRows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
+             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-nullRows>
+        <tr>
+          <td *ngFor="let col of columns">
+            {{nullRows[col]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
