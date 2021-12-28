@@ -26,4 +26,14 @@ export class ApiService {
   public deleteNullRows():Observable<any>{
     return this.http.delete(`${this.apiServerUrl}/delete_null`);
   }
+
+  //communicate api, willreturn all rows which have infinit values
+  public getInfinitRows():Observable<any>{
+    return this.http.get<any>(`${this.apiServerUrl}/infinit_values`);
+  }
+
+  // communicate with delete null values API (DELETE) return number of all null values deleted
+  public deletetRows_InfinitValues():Observable<any>{
+    return this.http.delete(`${this.apiServerUrl}/delete_infinit`);
+  }
 }
