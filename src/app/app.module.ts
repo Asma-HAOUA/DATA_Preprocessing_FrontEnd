@@ -75,6 +75,8 @@ registerLocaleData(localeEn, 'en-EN');
         ChartModule,
         CardModule,
         ButtonModule,
+        ChartModule,
+        CardModule,
         ToastrModule.forRoot({
             timeOut: 3000,
             positionClass: 'toast-bottom-right',

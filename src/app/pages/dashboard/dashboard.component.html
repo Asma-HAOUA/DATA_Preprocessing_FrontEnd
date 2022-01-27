@@ -1,3 +1,5 @@
+
+
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -13,9 +15,25 @@
             </div>
             <!-- /.col -->
         </div>
-        <!-- /.row -->
+
+      <div class="row mb-2">
+        <div class="col-sm-6">
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <button type="button" label="Download" (click)="exportExcel();" pButton pRipple icon="pi pi-file-excel" class="p-button-success p-button-raised p-button-rounded float-sm-right"></button>
+        </div>
+      </div>
+      <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
+    <div class="row m-3">
+      <p-card header="All class size" class="col-12" styleClass="p-card-shadow">
+        <div class="card">
+          <p-chart type="bar" [data]="basicData"></p-chart>
+        </div>
+      </p-card>
+    </div>
 </div>
 <!-- /.content-header -->
 

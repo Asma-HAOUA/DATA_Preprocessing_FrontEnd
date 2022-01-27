@@ -2,12 +2,14 @@ import {Component} from '@angular/core';
 import {ApiService} from "@services/api.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {ToastrService} from "ngx-toastr";
+import * as FileSaver from 'file-saver';
 
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent {
   basicData: any;
   columns :string[] = new Array();
@@ -51,4 +53,18 @@ export class DashboardComponent {
   }
 
 
+  exportExcel() {
+    this.api.latestData().subscribe(
+        (response:any[])=>{
+          FileSaver.saveAs(
+            response,
+            "export.csv"
+          );
+          this.toastr.success('File uploaded successfully');
+      },
+      (error: HttpErrorResponse)=>{
+        this.toastr.error('There is a problem');
+      }
+    )
+  }
 }
