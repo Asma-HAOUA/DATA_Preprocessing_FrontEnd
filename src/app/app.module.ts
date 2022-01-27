@@ -34,6 +34,8 @@ import { SupprimerInfiniesComponent } from './pages/nettoyer-dataset/supprimer-i
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {BadgeModule} from 'primeng/badge';
+import {ChartModule} from 'primeng/chart';
+import {CardModule} from 'primeng/card';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -70,6 +72,8 @@ registerLocaleData(localeEn, 'en-EN');
         BrowserAnimationsModule,
         TableModule,
         BadgeModule,
+        ChartModule,
+        CardModule,
         ButtonModule,
         ToastrModule.forRoot({
             timeOut: 3000,

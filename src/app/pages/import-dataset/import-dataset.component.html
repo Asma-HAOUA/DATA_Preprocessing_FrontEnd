@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Importer les fichiers à traiter</h1>
+                <h1>Import files</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Importer</li>
+                    <li class="breadcrumb-item active">Import</li>
                 </ol>
             </div>
         </div>
@@ -16,20 +16,40 @@
     <!-- /.container-fluid -->
 </section>
 
-<section>
-<div class="importerDiv">
-    <input type="file" id="inputUpload" name="file_name" multiple=true (change)="onFilesSelected($event)" accept=".csv">
-    <label for="inputUpload" class="LablUpload">
-        <i class="fas fa-file-csv"></i>&nbsp;&nbsp;
-        Choisir les fichiers
-    </label>
+
+<div class="outer-wrapper">
+    <section class="wrapper">
+        <span  class="spanUpload" id="spanUpload">
+            <input class="file-input" id="file-input" type="file" name="file" multiple=true (change)="onFilesSelected($event)" hidden >
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Browse file to upload</p>
+        </span>
+        
+        <div *ngIf="selectedFiles.length" class="selectedFiles">
+            <section class="uploaded-area" *ngFor="let file of selectedFiles;let i = index;">
+                <li class="row1">
+                    <div class="content">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="details">
+                            <span class="name">{{reduceFileName(selectedFiles[i].name)}}</span>
+                            <span class="size">{{calculSize(file.size)}}</span>
+                        </div>
+                    </div>
+                    <div>{{ progressInfos[i].value }}%</div>
+                </li>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" [ngStyle]="{ width: progressInfos[i].value + '%' }"></div>
+                </div>
+            </section>
+        </div>
+
+        <button class="btn-Upload" id="btn-Upload" (click)="uploadFiles()">Upload</button>
+        
+        
+    </section>
+    
 </div>
-<div class="importerDiv"><ul *ngIf="uploadedFiles.length">
-        <li *ngFor="let file of uploadedFiles">{{file.name}} --- {{file.size}}  Octets</li>
-    </ul>
-</div>
-<div class="importerDiv"><button id="upload" (click)="onUpload()"> <i class="fas fa-upload"></i>&nbsp;&nbsp; Importer </button></div>
-</section>
+
 
 
 

@@ -24,40 +24,40 @@ export const MENU = [
         path: ['/']
     },
     {
-        name: 'Importer Dataset',
+        name: 'Import dataset',
         icon: 'nav-icon fa fa-arrow-circle-down',
         path: ['/import-dataset']
     },
     {
-        name: 'Nettoyer Dataset',
+        name: 'Clean dataset',
         icon: 'nav-icon fa fa-tasks',
         children: [
             {
-                name: 'Supprimer les doubles',
+                name: 'Remove duplicates',
                 icon: 'nav-icon fa fa-braille',
                 path: ['/Supprimer-les-doubles']
             },
 
             {
-                name: 'Supprimer les nulles',
+                name: 'Remove null values',
                 icon: 'nav-icon fa fa-spinner',
                 path: ['/Supprimer-les-nulles']
             },
 
             {
-                name: 'Supprimer les infinies',
+                name: 'Remove infinit values',
                 icon: 'nav-icon fa fa-bullseye',
                 path: ['/Supprimer-les-infinies']
             }
         ]
     },
     {
-        name: 'Reduire Dataset',
+        name: 'Reduce dimension',
         icon: 'nav-icon fa fa-cogs',
         path: ['/import-dataset']
     },
     {
-        name: 'Equilibrer Dataset',
+        name: 'balance Dataset',
         icon: 'nav-icon fa fa-balance-scale',
         path: ['/import-dataset']
     },

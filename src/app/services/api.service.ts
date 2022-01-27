@@ -46,4 +46,9 @@ export class ApiService {
     return this.http.delete(`${this.apiServerUrl}/delete_duplicate`);
   }
 
+  //cominucate with dashboard controller
+  public countClass():Observable<any>{
+    return this.http.get(`${this.apiServerUrl}/count_class`);
+  }
+
 }

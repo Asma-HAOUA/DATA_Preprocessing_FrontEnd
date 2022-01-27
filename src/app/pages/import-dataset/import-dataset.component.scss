@@ -1,65 +1,156 @@
-body{
-    margin: 0;
-    padding: 0;
+.content-header{
+    padding-top: 60px;
+}
+.outer-wrapper{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaecef;
+    min-height: 470px;
 }
 
-.importerDiv{
-    display: flex;
-    width: 100%;
-    left:0;
-    right:0;
-    margin-left: auto;
-    margin-right: auto;
+.wrapper{
     margin-top: 20px;
-    justify-content: center;
-    
+    margin-bottom: 20px;
+    width: 430px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
 }
 
-.importerDiv div{
-    display: block;
+.spanUpload{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
 }
-#inputUpload{
-    display: none;
-    
+
+.spanUpload :where(i, p){
+    color: #6990F2;
 }
 
+.spanUpload i{
+    font-size: 50px;
+}
 
+.spanUpload p{
+    font-size: 16px;
+    margin-top: 15px;
+}
 
-.LablUpload{
-    color:black;
-    width: 250px;
-    height: 60px;
-    background-color:#f5af09;
-    border-radius: 30px;
-    font-size:17px;
-    justify-content: center;
-    align-items:center;
-    text-align: center;
+.uploaded-area{
+    margin-bottom: 10px;
+    background: #E9F0FF;
+    padding: 15px 20px;
+    border-radius: 5px;
+    max-height: 232px;
+    overflow-y: scroll;
+  }
+
+  .uploaded-area::-webkit-scrollbar{
+    width: 0px;
+  }
+
+.uploaded-area .row1 .content{
     display: flex;
+    align-items: center;
 }
 
-.LablUpload i{
-    font-size: 20px;
+.uploaded-area .row1 .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+  }
+  .uploaded-area .row1 .details .size{
+    color: #404040;
+    font-size: 11px;
+  }
+  .uploaded-area i.fa-check{
+    font-size: 16px;
+  }
+
+
+.wrapper .row1{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#upload{
-    display: none;
+.wrapper .row1 i{
+    color: #6990F2;
+    font-size: 30px;
+}
 
-    color:black;
-    width: 250px;
-    height: 60px;
-    background-color:#f5af09;
+.wrapper .row1 .details span{
+    font-size: 14px;
+}
+//bda lcode dial progess
+.progress-area .row1 .content{
+    width: 100%;
+    margin-left: 15px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+.progress-bar{
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #fff;
     border-radius: 30px;
-    position: absolute;
-    margin: auto;
-    font-size:17px;
-    font-weight: bold;
-    justify-content: center;
-    align-items:center;
-    border: none;
-    //display: block;
+    display: none;
 }
+.progress-bar .progress{
+    height: 100%;
+    background: #6990F2;
+    border-radius: inherit;
+  }
 
-#upload i{
-    font-size: 20px;
-}
+  
+  .selectedFiles{
+    max-height: 232px;
+    overflow-y: scroll;
+  }
+
+  .btn-Upload{
+      color: #6990F2;
+      border-color: #6990F2;
+      width: 100%;
+      height: 50px;
+      background-color: #ffff;
+      border-radius: 30px;
+      margin-top: 15px;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      display: none;
+  }
+
+  .btn-Upload:hover{
+      color: #ffff;
+      background-color: #6990F2;
+  }
+
+//copiage 
+  
+  /*
+  .uploaded-area.onprogress{
+    max-height: 150px;
+  }
+  
+  
+  
+  
+  
+  */
