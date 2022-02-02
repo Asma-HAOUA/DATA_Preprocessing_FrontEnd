@@ -64,4 +64,9 @@ export class ApiService {
     return this.http.get(`${this.apiServerUrl}/balancing`);
   }
 
+  //######################### dataset balancing ##############################
+  public reduceDimension():Observable<any>{
+    return this.http.get(`${this.apiServerUrl}/reduction`);
+  }
+
 }

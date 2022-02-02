@@ -1,3 +1,4 @@
+import { DimReductionComponent } from './pages/dim-reduction/dim-reduction.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {MainComponent} from '@modules/main/main.component';
@@ -51,6 +52,10 @@ const routes: Routes = [
             {
                 path: 'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path: 'Reduce-dimension',
+                component: DimReductionComponent
             },
             {path: '**', redirectTo: 'import-dataset'}
         ]

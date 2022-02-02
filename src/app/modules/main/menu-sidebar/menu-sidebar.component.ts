@@ -54,7 +54,7 @@ export const MENU = [
     {
         name: 'Reduce dimension',
         icon: 'nav-icon fa fa-cogs',
-        path: ['/import-dataset']
+        path: ['/Reduce-dimension']
     },
     {
         name: 'balance Dataset',
