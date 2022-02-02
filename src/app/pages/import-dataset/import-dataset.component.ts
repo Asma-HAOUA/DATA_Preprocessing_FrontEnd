@@ -25,6 +25,7 @@ export class ImportDatasetComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.selectedFiles = null;
     this.fileInfos = this.uploadService.getFiles();
     console.log("from ngOnInit ");
     console.log(this.fileInfos);
@@ -32,7 +33,7 @@ export class ImportDatasetComponent implements OnInit {
     (<HTMLInputElement>document.getElementById("spanUpload")).addEventListener("click", () =>{
       fileInput.click();
     });
-    
+
   }
 
 
@@ -55,7 +56,7 @@ export class ImportDatasetComponent implements OnInit {
       (<HTMLInputElement>document.getElementById("btn-Upload")).style.display = "block";
     }
     console.log(this.selectedFiles);
-    
+
   }
 
   calculSize(size:number):number{
@@ -75,15 +76,15 @@ export class ImportDatasetComponent implements OnInit {
     }
     return fileName;
   }
-  
+
   uploadFiles(): void {
     this.message = [];
     let elements = document.querySelectorAll('.progress-bar');
     console.log(elements);
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
       (<HTMLDivElement>elements[i]).style.display = "block";
     }
-    
+
     if (this.selectedFiles) {
       for (let i = 0; i < this.selectedFiles.length; i++) {
         this.upload(i, this.selectedFiles[i]);
@@ -91,7 +92,7 @@ export class ImportDatasetComponent implements OnInit {
     }
     (<HTMLInputElement>document.getElementById("btn-Upload")).style.display = "none";
 
-    
+
   }
 
   upload(idx: number, file: File): void {
@@ -119,9 +120,9 @@ export class ImportDatasetComponent implements OnInit {
     }
   }
 
-  //http request sending list of files 
+  //http request sending list of files
   /*upload() {
-    
+
     const formData: FormData = new FormData();
     /*for(let i = 0; i < this.uploadedFiles.length; i++){
       formData.append("fileName", this.uploadedFiles[i]);
@@ -159,7 +160,7 @@ export class ImportDatasetComponent implements OnInit {
       }
     );
     }
-    
+
   }*/
 
 
@@ -169,7 +170,7 @@ export class ImportDatasetComponent implements OnInit {
     const file=new FormData();
     for(let i = 0; i < this.uploadedFiles.length; i++){
       file.append("fileName", this.uploadedFiles[i]);
-      
+
       console.log(file);
     }
     this.http.post<any>('http://127.0.0.1:5000/upload',file)

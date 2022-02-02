@@ -36,6 +36,7 @@ import {TableModule} from 'primeng/table';
 import {BadgeModule} from 'primeng/badge';
 import {ChartModule} from 'primeng/chart';
 import {CardModule} from 'primeng/card';
+import { BalancingComponent } from './pages/balancing/balancing.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -62,7 +63,8 @@ registerLocaleData(localeEn, 'en-EN');
         NettoyerDatasetComponent,
         SupprimerNullesComponent,
         SupprimerDoublesComponent,
-        SupprimerInfiniesComponent
+        SupprimerInfiniesComponent,
+        BalancingComponent
     ],
     imports: [
         BrowserModule,

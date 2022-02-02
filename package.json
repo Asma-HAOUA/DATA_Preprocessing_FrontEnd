@@ -32,7 +32,10 @@
     "@angular/platform-browser": "13.0.0",
     "@angular/platform-browser-dynamic": "13.0.0",
     "@angular/router": "13.0.0",
+    "@types/chart.js": "^2.9.35",
+    "chart.js": "^3.7.0",
     "core-js": "3.8.0",
+    "file-saver": "^2.0.5",
     "gatekeeper-client-sdk": "0.3.0",
     "install": "^0.13.0",
     "luxon": "^2.0.2",
@@ -44,7 +47,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "13.0.1",
+    "@angular-devkit/build-angular": "^13.2.1",
     "@angular-eslint/builder": "12.6.1",
     "@angular-eslint/eslint-plugin": "12.6.1",
     "@angular-eslint/eslint-plugin-template": "12.6.1",

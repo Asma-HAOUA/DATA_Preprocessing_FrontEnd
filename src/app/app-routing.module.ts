@@ -15,6 +15,7 @@ import { NettoyerDatasetComponent } from './pages/nettoyer-dataset/nettoyer-data
 import { SupprimerNullesComponent } from './pages/nettoyer-dataset/supprimer-nulles/supprimer-nulles.component';
 import { SupprimerDoublesComponent } from './pages/nettoyer-dataset/supprimer-doubles/supprimer-doubles.component';
 import { SupprimerInfiniesComponent } from './pages/nettoyer-dataset/supprimer-infinies/supprimer-infinies.component';
+import {BalancingComponent} from "@pages/balancing/balancing.component";
 
 const routes: Routes = [
     {
@@ -44,9 +45,14 @@ const routes: Routes = [
                 component: SupprimerInfiniesComponent
             },
             {
-                path: '',
+              path: 'balancing',
+              component: BalancingComponent
+            },
+            {
+                path: 'dashboard',
                 component: DashboardComponent
-            }
+            },
+            {path: '**', redirectTo: 'import-dataset'}
         ]
     },
     {

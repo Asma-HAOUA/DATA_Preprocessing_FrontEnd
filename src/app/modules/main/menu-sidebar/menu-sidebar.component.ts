@@ -19,14 +19,14 @@ export class MenuSidebarComponent implements OnInit {
 
 export const MENU = [
     {
-        name: 'Dashboard',
-        icon: 'nav-icon fas fa-th-large',
-        path: ['/']
+      name: 'Import dataset',
+      icon: 'nav-icon fa fa-arrow-circle-down',
+      path: ['/import-dataset']
     },
     {
-        name: 'Import dataset',
-        icon: 'nav-icon fa fa-arrow-circle-down',
-        path: ['/import-dataset']
+        name: 'Dashboard',
+        icon: 'nav-icon fas fa-th-large',
+        path: ['/dashboard']
     },
     {
         name: 'Clean dataset',
@@ -59,6 +59,6 @@ export const MENU = [
     {
         name: 'balance Dataset',
         icon: 'nav-icon fa fa-balance-scale',
-        path: ['/import-dataset']
+        path: ['/balancing']
     },
 ];

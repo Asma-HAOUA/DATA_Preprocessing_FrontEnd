@@ -58,4 +58,10 @@ export class ApiService {
     return this.http.get<Blob>(`${this.apiServerUrl}/latestData`,{ observe: 'body', responseType: 'blob' as 'json' });
   }
 
+
+  //######################### dataset balancing ##############################
+  public balancingData():Observable<any>{
+    return this.http.get(`${this.apiServerUrl}/balancing`);
+  }
+
 }

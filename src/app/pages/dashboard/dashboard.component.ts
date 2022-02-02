@@ -14,6 +14,7 @@ export class DashboardComponent {
   basicData: any;
   columns :string[] = new Array();
   values :number[] = new Array();
+  icon :string = "pi pi-file-excel";
 
   constructor(private api: ApiService, private toastr: ToastrService){}
 
@@ -54,12 +55,14 @@ export class DashboardComponent {
 
 
   exportExcel() {
+    this.icon = "pi pi-spin pi-spinner";
     this.api.latestData().subscribe(
         (response:any[])=>{
           FileSaver.saveAs(
             response,
             "export.csv"
           );
+          this.icon = "pi pi-file-excel";
           this.toastr.success('File uploaded successfully');
       },
       (error: HttpErrorResponse)=>{

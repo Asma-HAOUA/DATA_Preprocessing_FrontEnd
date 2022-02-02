@@ -24,7 +24,9 @@
             <i class="fas fa-cloud-upload-alt"></i>
             <p>Browse file to upload</p>
         </span>
-        
+    <div *ngIf="selectedFiles!=null">
+
+
         <div *ngIf="selectedFiles.length" class="selectedFiles">
             <section class="uploaded-area" *ngFor="let file of selectedFiles;let i = index;">
                 <li class="row1">
@@ -43,14 +45,16 @@
             </section>
         </div>
 
+    </div>
+
         <button class="btn-Upload" id="btn-Upload" (click)="uploadFiles()">Upload</button>
-        
-        
+
+
     </section>
-    
+
 </div>
 
 
 
 
-   
+
