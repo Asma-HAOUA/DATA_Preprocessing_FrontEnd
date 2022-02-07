@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {AppService} from '@services/app.service';
 
 @Component({
     selector: 'app-menu-sidebar',
@@ -10,10 +9,10 @@ export class MenuSidebarComponent implements OnInit {
     public user;
     public menu = MENU;
 
-    constructor(public appService: AppService) {}
+    constructor() {}
 
     ngOnInit() {
-        this.user = this.appService.user;
+        
     }
 }
 

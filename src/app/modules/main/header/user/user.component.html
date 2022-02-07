@@ -1,7 +1,7 @@
 <app-dropdown class="user-menu">
     <ng-container dropdown-button>
         <img
-            [src]="user.picture || 'assets/img/default-profile.png'"
+            src="assets/img/default-profile.png"
             class="user-image img-circle elevation-2"
             alt="User Image"
         />
@@ -9,18 +9,12 @@
     <ng-container dropdown-menu>
         <li class="userstyle user-header">
             <img
-                [src]="user.picture || 'assets/img/default-profile.png'"
+                src="assets/img/default-profile.png"
                 class="img-circle elevation-2"
                 alt="User Image"
             />
 
-            <p style="color: white;">
-                <span>{{ user.email }}</span>
-                <small>
-                    <span>Member since </span>
-                    <span>{{ formatDate(user.createdAt) }}</span>
-                </small>
-            </p>
+            
         </li>
         
         <!-- Menu Footer-->
@@ -28,7 +22,7 @@
             <a  [routerLink]="['/profile']" class="footerUserStyle btn" >
                 Profile
             </a>
-            <a (click)="logout()" class="footerUserStyle btn float-right">
+            <a class="footerUserStyle btn float-right">
                 Sign out
             </a>
         </li>
